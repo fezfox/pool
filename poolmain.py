@@ -23,21 +23,17 @@ logging.info('Main start')
 # Get the IDs of the DS18B20 temp sensors
 mySensorIDs = p.getSensorIDs()
 
-# Set number of seconds to wait between loops
+# Set number of seconds to wait between loops & number of loops to wait before sending data
 loopDelay = c.LOOPDELAY
-# Set number of loops to wait before sending data to Thingspeak
 loopSendData = c.LOOPSENDDATA
+loopCounter = c.LOOPSENDDATA - 1  # send on first loop
 
-loopCounter = 0
-
+#setup MQTT broker details
 broker_address = c.MQTTIP
 client = mqtt.Client("P1")
 client.username_pw_set("mqtt", c.MQTTPWORD)
 client.connect(broker_address, 1883, 60)
 client.loop_start()
-
-#send on start
-loopCounter = 4
 
 if __name__ == '__main__':
 
