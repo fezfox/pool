@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block head %}
+{{ super() }}
+<meta http-equiv="refresh" content="100">
+{% endblock head %}
+{% block content %}
+
+<div class="page-header">
+  <h1>Pool Monitor</h1>
+</div>
+<div class="panel panel-default">
+  <div class="panel-body">
+      <div class="row">
+        <div class="col-xs-12"><p class="text-primary temp text-center">{{data['t1']}}&deg;C</p><span class="text-muted">Water</span></div>
+      </div>
+  </div>
+</div>
+
+
+<p class="footnote text-center">Updated {{ data['ts'] }}</p>
+<p class="footnote text-center"><a href="/logout" >Logout {{ data['user'] }}</a></p>
+
+{% endblock content %}

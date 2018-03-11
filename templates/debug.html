@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="page-header">
+  <h1>Debug Data</h1>
+</div>
+<div class="panel panel-default">
+  <div class="panel-body">
+      <div class="row">
+        <div class="col-xs-12">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Property</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Sensor ID 1</td>
+                <td>{{data['id1']}}</td>
+              </tr>
+              <tr>
+                <td>Temp 1</td>
+                <td>{{data['t1']}}&deg;C</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+  </div>
+</div>
+
+<p class="footnote text-center">Updated {{ data['ts'] }}</p>
+
+{% endblock content %}

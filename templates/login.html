@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="panel panel-default">
+  <div class="panel-heading">Please login</div>
+  <div class="panel-body">
+       
+    <form method="post">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control input-lg" id="username" name="username" placeholder="Username">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control input-lg" id="password" name="password" placeholder="Password">
+      </div>
+      <button type="submit" class="btn btn-default btn-lg">Login</button>
+    </form>        
+        
+  </div>
+</div>
+
+{% endblock content %}
