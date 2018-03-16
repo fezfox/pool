@@ -33,7 +33,7 @@ app = Flask(__name__)
 app.secret_key = c.FLASKSECRET
 
 # clear log
-p.silentremove(c.BASEPATH + '/logs/web.log')
+p.silentRemove(c.BASEPATH + '/logs/web.log')
 
 logFormat = '%(asctime)s %(levelname)s:%(message)s'
 logging.basicConfig(format=logFormat, filename=c.BASEPATH + '/logs/web.log', level=logging.DEBUG)

@@ -14,7 +14,7 @@ import poollib as p
 import paho.mqtt.client as mqtt
 
 # clear log
-p.silentremove(c.BASEPATH + '/logs/main.log')
+p.silentRemove(c.BASEPATH + '/logs/main.log')
 
 logFormat = '%(asctime)s %(levelname)s:%(message)s'
 logging.basicConfig(format=logFormat, filename=c.BASEPATH + '/logs/main.log', level=logging.DEBUG)
@@ -29,7 +29,7 @@ loopSendData = c.LOOPSENDDATA
 loopCounter = c.LOOPSENDDATA - 1  # send on first loop
 
 #setup MQTT broker details
-broker_address = c.MQTTIP
+broker_address = p.getIp()
 client = mqtt.Client("P1")
 client.username_pw_set("mqtt", c.MQTTPWORD)
 client.connect(broker_address, 1883, 60)

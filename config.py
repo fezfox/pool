@@ -33,6 +33,5 @@ THINGSPEAKURL = 'https://api.thingspeak.com/update'
 
 
 # MQTT settings
-# enter thje IP address of your pi, and MQTT password
-MQTTIP = '10.0.0.35'
+# enter the MQTT password
 MQTTPWORD = ''
