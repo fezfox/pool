@@ -1,24 +1,10 @@
 #!/usr/bin/python3
 #-----------------------------------------------------------
-#    ___  ___  _ ____
-#   / _ \/ _ \(_) __/__  __ __
-#  / , _/ ___/ /\ \/ _ \/ // /
-# /_/|_/_/  /_/___/ .__/\_, /
-#                /_/   /___/
 #
-#     Pool Monitor System
-#          poolweb.py
-#
-# This is the web front-end script.
-#
-# It serves a status page and allows users to set the
-# pump mode and edit the schedule.
 #
 # Author : Matt Hawkins
-# Date   : 05/07/2017
+# Modified by: fezfox
 #
-# Addtional details here:
-# http://www.raspberrypi-spy.co.uk/
 #
 #-----------------------------------------------------------
 import time
